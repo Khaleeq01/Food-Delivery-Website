@@ -14,13 +14,11 @@ const port = 4000
 
 // middlewares
 app.use(express.json())
-app.use(cors(
-    {
-    origin:["https://food-delivery-website-tau-one.vercel.app"],
+app.use(cors({
+    origin:["https://food-delivery-website-gamma.vercel.app"],
     methods:["POST","GET","PUT","DELETE"],
     credentials: true
-    }
-));
+    }))
 
 // db connection
 connectDB()
