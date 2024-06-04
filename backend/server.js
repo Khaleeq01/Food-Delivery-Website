@@ -15,7 +15,7 @@ const port = 4000
 // middlewares
 app.use(express.json())
 app.use(cors({
-    origin:["https://food-delivery-website-gamma.vercel.app"],
+    origin:["https://food-delivery-website-gamma.vercel.app/"],
     methods:["POST","GET","PUT","DELETE"],
     credentials: true
     }))
