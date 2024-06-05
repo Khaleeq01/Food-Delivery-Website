@@ -25,7 +25,7 @@ const LoginPopup = ({ setShowLogin }) => {
     const onLogin = async (e) => {
         e.preventDefault()
 
-        let new_url = "https://food-delivery-website-backend.vercel.app";
+        let new_url = url;
         if (currState === "Login") {
             new_url += "/api/user/login";
         }
