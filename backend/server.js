@@ -20,25 +20,6 @@ app.use(cors({
     credentials: true
     }));
 
-// Custom middleware to log request headers and handle CORS
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://food-delivery-website-gamma.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    console.log('Request Headers:', req.headers);
-    next();
-});
-
-// Handle preflight (OPTIONS) requests
-app.options('*', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://food-delivery-website-gamma.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    res.setHeader('Access-Control-Allow-Credentials', 'true');
-    res.send();
-});
-
 // db connection
 connectDB()
 
