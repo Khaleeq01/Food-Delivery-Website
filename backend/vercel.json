@@ -1,21 +1,30 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/server.js"
-      }
-    ],
-    "headers": [
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
         {
-        "Access-Control-Allow-Origin": "https://food-delivery-website-gamma.vercel.app/",
-        "Access-Control-Allow-Credentials": "true"
-      }
-    ]
-  }
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://food-delivery-website-gamma.vercel.app"
+        },
+        {
+          "key": "Access-Control-Allow-Credentials",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}
