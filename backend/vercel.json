@@ -11,10 +11,8 @@
         "src": "/(.*)",
         "dest": "/server.js"
       }
-    ]
-  }
-{
-  "headers": [
+    ],
+      "headers": [
     {
       "source": "/api/(.*)",
       "headers": [
@@ -25,6 +23,4 @@
       ]
     }
   ]
-}
-
-  
+  }
