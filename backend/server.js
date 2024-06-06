@@ -17,8 +17,7 @@ app.use(express.json())
 app.use(cors({
     origin:["https://food-delivery-website-gamma.vercel.app/"],
     methods:["POST","GET","PUT","DELETE"],
-    credentials: true,
-    optionSuccessStatus:200
+    credentials: true
     }));
 
 // db connection
