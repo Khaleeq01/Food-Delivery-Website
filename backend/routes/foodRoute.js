@@ -1,21 +1,25 @@
 import express from 'express';
-import { addFood, listFood, removeFood } from '../controllers/foodController.js';
 import multer from 'multer';
-const foodRouter = express.Router();
+import path from 'path';
 
-//Image Storage Engine (Saving Image to uploads folder & rename it)
+const router = express.Router();
 
 const storage = multer.diskStorage({
-    destination: 'uploads',
-    filename: (req, file, cb) => {
-        return cb(null,`${Date.now()}${file.originalname}`);
+    destination: function (req, file, cb) {
+        const uploadPath = '/tmp/uploads'; // Use /tmp directory
+        cb(null, uploadPath);
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + path.extname(file.originalname));
     }
-})
+});
 
-const upload = multer({ storage: storage})
+const upload = multer({ storage: storage });
 
-foodRouter.get("/list",listFood);
-foodRouter.post("/add",upload.single('image'),addFood);
-foodRouter.post("/remove",removeFood);
+// Your other route handlers using the upload middleware
+// Example:
+router.post('/upload', upload.single('image'), (req, res) => {
+    res.status(200).json({ message: 'File uploaded successfully', file: req.file });
+});
 
-export default foodRouter;
+export default router;
