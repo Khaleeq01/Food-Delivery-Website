@@ -17,6 +17,7 @@ app.use(express.json())
 app.use(cors({
     origin:["https://food-delivery-website-gamma.vercel.app/"],
     methods:["POST","GET","PUT","DELETE"],
+     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
     }));
 
