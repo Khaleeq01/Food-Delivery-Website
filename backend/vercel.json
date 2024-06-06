@@ -12,8 +12,10 @@
         "dest": "/server.js"
       }
     ],
-    "headers": {
+    "headers": [
+        {
         "Access-Control-Allow-Origin": "https://food-delivery-website-gamma.vercel.app/",
         "Access-Control-Allow-Credentials": "true"
       }
+    ]
   }
