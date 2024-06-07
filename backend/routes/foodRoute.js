@@ -4,6 +4,7 @@ import path from 'path';
 
 const router = express.Router();
 
+// Multer configuration
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         const uploadPath = '/tmp/uploads'; // Use /tmp directory
@@ -16,10 +17,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Your other route handlers using the upload middleware
-// Example:
+// Example route for file upload
 router.post('/upload', upload.single('image'), (req, res) => {
     res.status(200).json({ message: 'File uploaded successfully', file: req.file });
+});
+
+// Route for getting food list
+router.get('/list', (req, res) => {
+    // Placeholder response, replace with actual database query
+    res.status(200).json({ message: 'This is the food list endpoint' });
 });
 
 export default router;
