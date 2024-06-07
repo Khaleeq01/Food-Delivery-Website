@@ -18,7 +18,7 @@ const upload = multer({ storage: storage });
 
 // Your other route handlers using the upload middleware
 // Example:
-router.post('/tmp/upload', upload.single('image'), (req, res) => {
+router.post('/upload', upload.single('image'), (req, res) => {
     res.status(200).json({ message: 'File uploaded successfully', file: req.file });
 });
 
