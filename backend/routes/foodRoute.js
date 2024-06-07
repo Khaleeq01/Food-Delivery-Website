@@ -8,7 +8,7 @@ import mkdirp from 'mkdirp';
 const foodRouter = express.Router();
 
 // Ensure the upload directory exists
-const uploadDir = path.join(os.tmpdir(), 'uploads');
+const uploadDir = path.join(os.tmpdir(), 'tmp/uploads');
 mkdirp.sync(uploadDir); // Create the uploads directory if it doesn't exist
 
 // Image Storage Engine (Saving Image to /tmp/uploads folder & rename it)
