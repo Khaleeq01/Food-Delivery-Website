@@ -10,7 +10,7 @@ import orderRouter from "./routes/orderRoute.js"
 // app config
 const app = express()
 const port =  4000;
-const path = require('path');
+
 
 
 // middlewares
@@ -27,7 +27,7 @@ connectDB()
 // api endpoints
 app.use("/api/user", userRouter)
 app.use("/api/food", foodRouter)
-app.use("/images", express.static(path.join(__dirname, "uploads")))
+app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
 
