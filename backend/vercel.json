@@ -1,13 +1,16 @@
-const allowedOrigins = ["https://food-delivery-website-gamma.vercel.app", "https://food-delivery-website-admin.vercel.app/"];
-
-app.use(cors({
-    origin: function(origin, callback) {
-        if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    methods: ["POST", "GET", "PUT", "DELETE"],
-    credentials: true
-}));
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/server.js"
+      }
+    ]
+  }
+  
