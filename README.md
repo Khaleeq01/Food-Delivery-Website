@@ -4,4 +4,6 @@ Food Delivery Website Deployed Link https://food-delivery-website-gamma.vercel.a
 
 Admin Panel Deployed Link https://food-delivery-website-admin.vercel.app/
 
+Backend Deployed Link https://food-delivery-website-v9oh.onrender.com
+
 
