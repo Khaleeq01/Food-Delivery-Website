@@ -5,6 +5,8 @@ Food Delivery Website Tomato made using MERN Stack in which user can login .Ther
 <br>
 <h2>Deployment</h2>
 
+Login Credentials Email: mohdkhaleeq07@gmail.com , Password: Khaleeq@123
+
 Food Delivery Website Deployed Link https://food-delivery-website-gamma.vercel.app/
 
 Admin Panel Deployed Link https://food-delivery-website-admin.vercel.app/
@@ -31,5 +33,51 @@ Backend Deployed Link https://food-delivery-website-v9oh.onrender.com
 <li>REST APIs</li>
 <li>Role-Based Identification</li>
 <li>Beautiful Alerts</li>
+
+<br>
+<h2>Runs Locally</h2>
+Clone the project
+
+    git clone https://github.com/Khaleeq01/Food-Delivery
+
+Go to the project directory
+
+    cd Food-Delivery
+
+Install dependencies (frontend)
+
+    cd frontend
+    npm install
+
+Install dependencies (admin)
+
+    cd admin
+    npm install
+
+Install dependencies (backend)
+
+    cd backend
+    npm install
+
+Setup Environment Vaiables
+
+    JWT_SECRET=YOUR_SECRET_TEXT
+    SALT=YOUR_SALT_VALUE
+    MONGO_URL=YOUR_DATABASE_URL
+    STRIPE_SECRET_KEY=YOUR_KEY
+
+Start the Backend server
+
+    nodemon server.js
+
+Start the Frontend server
+
+      npm run dev
+
+Start the Admin Panel
+
+    npm run dev 
+
+
 
 
