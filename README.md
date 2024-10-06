@@ -1,4 +1,4 @@
-TOMATO - Food Ordering Website
+<h1>TOMATO - Food Delivery Website</h1>
 
 Food Delivery Website Tomato made using MERN Stack in which user can login .There is an Admin panel in which admin user can add food items or remove food items on Tomato website . In tomato website users can add food items in the cart or remove food items in the cart and check the status of their food in MyOrders page.Clicking on the cart take user to payment page. Implement Stripe payment Integration.
 
